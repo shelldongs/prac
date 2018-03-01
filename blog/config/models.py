@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 class Link(models.Model):
-    STATUE_ITMES = (
+    STATUS_ITEMS = (
         (1, '正常'),
         (2, '删除'),
     )
