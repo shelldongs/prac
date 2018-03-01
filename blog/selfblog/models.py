@@ -19,7 +19,7 @@ class Post(models.Model):
     content = models.TextField(verbose_name="内容", help_text="注:目前仅支持markdown")
     status = models.IntegerField(default=1, choices=STATUS_ITEMS, verbose_name="状态")
     owner = models.ForeignKey(User, verbose_name="作者")
-    rank = models.IntegerField(default=0, verbose_name="权重")
+    weight = models.IntegerField(default=0, verbose_name="权重")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     
     class Meta:
