@@ -14,25 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
-from django.contrib.auth import views as auth_views
-
-from .custom_site import cus_site
-from selfblog.views import post_list, post_detail
+from .views import test_m2m
 
 urlpatterns = [
-    url(r'^$', post_list, name="post_list"),
-    url(r'^post/(?P<post_id>\d+)$', post_detail, name="post_detail"),
-    
-    url(r'^category/(?P<category_id>\d+)$', post_list, name="category_post_list"),
-    url(r'^tag/(?P<tag_id>\d+)$', post_list, name="tag_post_list"),
-
-    url(r'^admin/', admin.site.urls),
-    url(r'^blog_admin/', cus_site.urls),
-    url(r'^blog/', include('selfblog.urls')),
+    url(r'^test$', test_m2m),
 ]
-
-
-
-
-

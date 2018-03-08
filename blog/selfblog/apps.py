@@ -6,3 +6,4 @@ from django.apps import AppConfig
 
 class SelfblogConfig(AppConfig):
     name = 'selfblog'
+    verbose_name = "博客"

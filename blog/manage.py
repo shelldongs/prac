@@ -3,6 +3,8 @@ import os
 import sys
 
 if __name__ == "__main__":
+    reload(sys)
+    sys.setdefaultencoding("utf8")
     profile = os.environ.get('TYPE_PROFILE', 'develop')
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blog.settings.%s" %profile)
     try:

@@ -2,5 +2,18 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from .models import Link, SideBar
 
-# Register your models here.
+
+class LinkAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Link, LinkAdmin)
+
+
+class SideBarAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(SideBar, SideBarAdmin)
