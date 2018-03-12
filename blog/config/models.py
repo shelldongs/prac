@@ -28,10 +28,10 @@ class SideBar(models.Model):
         (2, '下线'),
     )
     SIDE_TYPE = (
-        (1, 'HTML'),
-        (2, '最新文章'),
-        (3, '最热文章'),
-        (4, '最新评论'),
+        (1, 'notices'),
+        (2, 'recently_post'),
+        (3, 'hot_post'),
+        (4, 'recently_comment'),
     )
 
     title = models.CharField(max_length=50, verbose_name="标题")

@@ -15,8 +15,12 @@ from .models import Tag
 from config.models import Link, SideBar
 
 
+PAGE_SIZE = 6
+
+
 class CommonContextMixin(ContextMixin):
-    def get_common_context(self):
+
+    def get_categories_context(self):
         categories = Category.objects.filter(status=1)
         cates = []
         nav_cate = []
@@ -27,31 +31,36 @@ class CommonContextMixin(ContextMixin):
             else:
                 cates.append(c)
 
-        tags = Tag.objects.filter(status=1)
+        return {'cates': cates, 'nav_cate': nav_cate}
 
+    def get_tags_context(self):
+        tags = Tag.objects.filter(status=1)
+        return {'tags': tags}
+
+    def get_sidebars_context(self):
         sidebar = SideBar.objects.filter(status=1).order_by('display_type')
         sidebars = {}
         for side in sidebar:
-            if side.display_type == 1:
-                sidebars['notice'] = side
-            elif side.display_type == 2:
-                sidebars['recently_post'] = side
+            sidebars[side.get_display_type_display()] = side
 
-
-        links = Link.objects.filter(status=1).order_by('weight')
-
+        return {'sidebars': sidebars}
+    
+    def get_recently_context(self):
         recently_post = Post.objects.filter(status=1).order_by('-created_time')[:10]
+        return {'recently_post': recently_post}
 
-        context_data = {
-            'cates': cates,
-            'nav_cate': nav_cate,
-            'tags': tags,
-            'sidebars': sidebars,
-            'links': links,
-            'recently_post': recently_post,
-        }
+    def get_links_context(self):
+        links = Link.objects.filter(status=1).order_by('weight')
+        return {'links': links}
 
-        return context_data
+    def get_common_context(self):
+        context = {}
+        context.update(self.get_links_context())
+        context.update(self.get_recently_context())
+        context.update(self.get_sidebars_context())
+        context.update(self.get_tags_context())
+        context.update(self.get_categories_context())
+        return context
 
     def get_context_data(self, **kwargs):
         context = self.get_common_context()
@@ -62,7 +71,7 @@ class CommonContextMixin(ContextMixin):
 
 class BasePostView(ListView, CommonContextMixin):
     model = Post
-    paginate_by = 6
+    paginate_by = PAGE_SIZE
     context_object_name = "posts"
     ordering = ('-weight', '-created_time')
     template_name = "post/list.html"
@@ -112,20 +121,21 @@ class PostDetailView(DetailView, CommonContextMixin):
     context_object_name = "post"
     template_name = "post/detail.html"
 
-    def get_object(self):
-        post = super(PostDetailView, self).get_object()
-
-        try:
-            prev_post = Post.objects.filter(created_time__gt=post.created_time)[0]
-        except IndexError:
-            prev_post = None
-        try:
-            next_post = Post.objects.filter(created_time__lt=post.created_time)[0]
-        except IndexError:
-            next_post = None
+    def get_context_data(self, **kwargs):
+        if self.object:
+            post = self.object
+            try:
+                prev_post = Post.objects.filter(created_time__gt=post.created_time)[0]
+            except IndexError:
+                prev_post = None
+            try:
+                next_post = Post.objects.filter(created_time__lt=post.created_time)[0]
+            except IndexError:
+                next_post = None
+            
+            self.extra_context = {'prev_post': prev_post, 'next_post': next_post}
         
-        self.extra_context = {'prev_post': prev_post, 'next_post': next_post}
-        return post
+        return super(PostDetailView, self).get_context_data(**kwargs)
 
 
 def test_m2m(request):
