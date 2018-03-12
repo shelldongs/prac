@@ -19,7 +19,6 @@ PAGE_SIZE = 6
 
 
 class CommonContextMixin(ContextMixin):
-
     def get_categories_context(self):
         categories = Category.objects.filter(status=1)
         cates = []
