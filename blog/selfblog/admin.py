@@ -27,6 +27,8 @@ def set_on_top(obj):
 set_on_top.short_description = "是否置顶"
 '''
 
+
+@admin.register(Post, site=cus_site)
 class PostAdmin(BaseOwnerAdmin):
     form = PostAdminForm  # 不如在ModelAdmin中做fileds
     actions_on_bottom = True  # 底部展示action
@@ -47,13 +49,15 @@ class PostAdmin(BaseOwnerAdmin):
 
     def get_list_display(self, request):
         if request.user.is_superuser:
-            return ('title', 'set_on_top', 'owner', 'category', 'created_time', 'status', 'my_delete')
+            return ('title', 'set_on_top', 'owner', 'category', 
+                    'created_time', 'status', 'my_delete')
         else:
             return ('title', 'set_on_top', 'category', 'created_time', 'status', 'my_delete')
+    
     list_display = ('category',) 
     list_filter = ('category__name', 'status', 'owner__username', 'tags')
     list_display_links = ('title',)
-    list_editable = ('category',)
+    #list_editable = ('category',)  # 会造成大量外键查询
 
 
     # 修改页面配置
@@ -75,6 +79,7 @@ class PostAdmin(BaseOwnerAdmin):
         }),
     )
     '''
+
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'category':
             kwargs['queryset'] = Category.objects.filter(owner=request.user)
@@ -86,9 +91,7 @@ class PostAdmin(BaseOwnerAdmin):
         return super(PostAdmin, self).formfield_for_manytomany(db_field, request, **kwargs)
 
 
-cus_site.register(Post, PostAdmin)
-
-
+@admin.register(Tag, site=cus_site)
 class TagAdmin(BaseOwnerAdmin):
     list_display = ('name', 'status', 'created_time')
     fields = ('name', 'status')
@@ -99,9 +102,8 @@ class TagAdmin(BaseOwnerAdmin):
         else:
             return ('name', 'status', 'created_time')
 
-cus_site.register(Tag, TagAdmin)
 
-
+@admin.register(Category, site=cus_site)
 class CategoryAdmin(BaseOwnerAdmin):
     list_display = ('name', 'is_nav', 'status', 'created_time')
     fields = ('name', 'is_nav', 'status')
@@ -112,4 +114,3 @@ class CategoryAdmin(BaseOwnerAdmin):
         else:
             return ('name', 'is_nav', 'status', 'created_time')
 
-cus_site.register(Category, CategoryAdmin)

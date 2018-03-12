@@ -18,14 +18,14 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 from .custom_site import cus_site
-from selfblog.views import post_list, post_detail
+from selfblog.views import PostDetailView, IndexView, CategoryView, TagView
 
 urlpatterns = [
-    url(r'^$', post_list, name="post_list"),
-    url(r'^post/(?P<post_id>\d+)$', post_detail, name="post_detail"),
+    url(r'^$', IndexView.as_view(), name="post_list"),
+    url(r'^post/(?P<post_id>\d+)$', PostDetailView.as_view(), name="post_detail"),
     
-    url(r'^category/(?P<category_id>\d+)$', post_list, name="category_post_list"),
-    url(r'^tag/(?P<tag_id>\d+)$', post_list, name="tag_post_list"),
+    url(r'^category/(?P<category_id>\d+)$', CategoryView.as_view(), name="category_post_list"),
+    url(r'^tag/(?P<tag_id>\d+)$', TagView.as_view(), name="tag_post_list"),
 
     url(r'^admin/', admin.site.urls),
     url(r'^blog_admin/', cus_site.urls),
