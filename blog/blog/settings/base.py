@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'blog.queriesmiddle.QueriesMiddleware',
+    #'blog.queriesmiddle.QueriesMiddleware',
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -97,6 +97,43 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
+CACHES = {
+    "default": {
+                "BACKEND": "django_redis.cache.RedisCache",
+                "LOCATION": "redis://127.0.0.1:6379/0",
+        "OPTIONS": {
+                        "CLIENT_CLASS": "django_redis.client.DefaultClient",
+                        "PASSWORD": "kk123456",
+                        "IGNORE_EXCEPTIONS": True,                    
+        }
+            
+    },
+    "count": {
+                "BACKEND": "django_redis.cache.RedisCache",
+                "LOCATION": "redis://127.0.0.1:6379/3",
+        "OPTIONS": {
+                        "CLIENT_CLASS": "django_redis.client.DefaultClient",
+                        "PASSWORD": "kk123456",
+                        "IGNORE_EXCEPTIONS": True,                    
+        }
+            
+    },
+    "flag": {
+                "BACKEND": "django_redis.cache.RedisCache",
+                "LOCATION": "redis://127.0.0.1:6379/5",
+        "OPTIONS": {
+                        "CLIENT_CLASS": "django_redis.client.DefaultClient",
+                        "PASSWORD": "kk123456",
+                        "IGNORE_EXCEPTIONS": True,                    
+        }
+            
+    },
+}
+
+
+
 
 
 # Password validation

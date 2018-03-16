@@ -21,7 +21,10 @@ class Post(models.Model):
     owner = models.ForeignKey(User, verbose_name="作者")
     weight = models.IntegerField(default=0, verbose_name="权重")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
-    
+
+    pv = models.PositiveIntegerField(default=0, verbose_name="pv")
+    uv = models.PositiveIntegerField(default=0, verbose_name="uv")
+
     class Meta:
         verbose_name = verbose_name_plural = "文章"
 

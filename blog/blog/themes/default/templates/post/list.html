@@ -12,13 +12,13 @@
                     {% if post.weight == 1 %}
                         [置顶]
                     {% endif %}
-                    <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+                    <a href="{% url 'post_detail' username post.id %}">{{ post.title }}</a>
                 </h3>
             </div>
             <div class="post-content">
                 <div>
                     <p>
-                        {{ post.desc }} <a href="{% url "post_detail" post.id %}">继续阅读</a>
+                        {{ post.desc }} <a href="{% url 'post_detail' username post.id %}">继续阅读</a>
                     </p>
                 </div>
             </div>
@@ -29,20 +29,30 @@
         </div>
         {% endfor %}
     {% else %}
-        Empty page!
+        这个页面暂时没有东西哦!
     {% endif %}
     <nav aria-label="Page navigation">
       <ul class="pagination">
       {% if page_obj.has_previous %}
+          {% if q %}
+          <li><a href="?page=1&q={{ q }}&username={{ username }}">首页</a></li>
+          <li><a href="?page={{ page_obj.previous_page_number }}&q={{ q }}&username={{ username }}">上一页</a></li>
+          {% else %}
           <li><a href="?page=1">首页</a></li>
           <li><a href="?page={{ page_obj.previous_page_number }}">上一页</a></li>
+          {% endif %}
       {% endif %}
 
       <li><a>第{{ page_obj.number }}页总{{ paginator.num_pages }}页</a></li>
 
       {% if page_obj.has_next %}
+          {% if q %}
+          <li><a href="?page={{ page_obj.next_page_number }}&q={{ q }}&username={{ username }}">下一页</a></li>
+          <li><a href="?page={{ paginator.num_pages }}&q={{ q }}&username={{ username }}">尾页</a></li>
+          {% else %}
           <li><a href="?page={{ page_obj.next_page_number }}">下一页</a></li>
           <li><a href="?page={{ paginator.num_pages }}">尾页</a></li>
+          {% endif %}
       {% endif %}
 
       </ul>
@@ -56,7 +66,7 @@
       <div class="row">
           <div class="friendlink">
               <ul class="nav nav-pills">
-                  <li role="presentation"><a href="/">Home</a></li>
+                  <li role="presentation"><a href="/{{ username }}">Home</a></li>
                   {% for link in links %}
                       <li role="presentation"><a href="{{link.href}}" target="_blank">{{ link.title }}</a></li>
                   {% endfor %}

@@ -18,15 +18,15 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 from .custom_site import cus_site
-from selfblog.views import PostDetailView, IndexView, CategoryView, TagView
+from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView
 
 urlpatterns = [
-    url(r'^$', IndexView.as_view(), name="post_list"),
-    url(r'^post/(?P<post_id>\d+)$', PostDetailView.as_view(), name="post_detail"),
+    url(r'^search$', SearchView.as_view(), name="search_post"),
+    url(r'^(?P<author_name>\w+)$', IndexView.as_view(), name="post_list"),
+    url(r'^(?P<author_name>\w+)/post/(?P<post_id>\d+)$', PostDetailView.as_view(), name="post_detail"),
+    url(r'^(?P<author_name>\w+)/category/(?P<category_id>\d+)$', CategoryView.as_view(), name="category_post_list"),
+    url(r'^(?P<author_name>\w+)/tag/(?P<tag_id>\d+)$', TagView.as_view(), name="tag_post_list"),
     
-    url(r'^category/(?P<category_id>\d+)$', CategoryView.as_view(), name="category_post_list"),
-    url(r'^tag/(?P<tag_id>\d+)$', TagView.as_view(), name="tag_post_list"),
-
     url(r'^admin/', admin.site.urls),
     url(r'^blog_admin/', cus_site.urls),
     url(r'^blog/', include('selfblog.urls')),

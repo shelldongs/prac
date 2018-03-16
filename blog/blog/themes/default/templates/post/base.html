@@ -27,13 +27,13 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="/">Kylin</a>
+                  <a class="navbar-brand" href="/{{ username }}">Kylin</a>
               </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                      <li><a href="/">首页 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="/{{ username }}">首页 <span class="sr-only">(current)</span></a></li>
                       {% for nav in nav_cate %}
-                        <li><a href="{% url 'category_post_list' nav.id %}">{{ nav.name }}</a></li>
+                        <li><a href="{% url 'category_post_list' username nav.id %}">{{ nav.name }}</a></li>
                       {% endfor %}
                       <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于我<span class="caret"></span></a>
@@ -45,9 +45,10 @@
                       </li>
                   </ul>
              
-              <form class="navbar-form navbar-right">
+                  <form class="navbar-form navbar-right" action="/search" method="GET">
                   <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Search">
+                      <input type="text" name="q" class="form-control" placeholder="Search">
+                      <input type="hidden" name="username" value="{{ username }}">
                   </div>
                   <button type="submit" class="btn btn-default">Submit</button>
               </form>
@@ -63,9 +64,9 @@
       <nav>
           <div class="container">
               <ul class="nav nav-pills" style="border-bottom:1px solid #C0C0C0">
-                  <li role="presentation"><a href="/">首页</a></li>
+                  <li role="presentation"><a href="/{{ username }}">首页</a></li>
                   {% for nav in nav_cate %}
-                    <li role="presentation"><a href="{% url 'category_post_list' nav.id %}">{{ nav.name }}</a></li>
+                    <li role="presentation"><a href="{% url 'category_post_list' username nav.id %}">{{ nav.name }}</a></li>
                   {% endfor %}
               </ul>
           </div>
@@ -77,12 +78,12 @@
                     {% block content %}{% endblock %}
                 </div>
                 <div class="col-md-3">
-                    {% if sidebars.notice %}
+                    {% if sidebars.notices %}
                         <div>
-                            <h3>{{ sidebars.notice.title }}</h3>
+                            <h3>{{ sidebars.notices.title }}</h3>
                             <div>
                                 {% autoescape off %}
-                                {{ sidebars.notice.content }}
+                                {{ sidebars.notices.content }}
                                 {% endautoescape %}
                             </div>
                         </div>
@@ -92,7 +93,7 @@
                         <h3>标签</h3>
                         <ul class="list-inline">
                             {% for tag in tags %}
-                                <li><a href="{% url 'tag_post_list' tag.id %}">{{ tag.name }}</a></li>
+                                <li><a href="{% url 'tag_post_list' username tag.id %}">{{ tag.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -101,7 +102,7 @@
                         <h3>分类</h3>
                         <ul class="list-unstyled">
                             {% for cate in cates %}
-                                <li><a href="{% url 'category_post_list' cate.id %}">{{ cate.name }}</a></li>
+                                <li><a href="{% url 'category_post_list' username cate.id %}">{{ cate.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -112,7 +113,7 @@
                             <h3>{{ sidebars.recently_post.title }}</h3>
                             <ul class="list-unstyled">
                                 {% for post in recently_post %}
-                                    <li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></li>
+                                    <li><a href="{% url 'post_detail' username post.id %}">{{ post.title }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
