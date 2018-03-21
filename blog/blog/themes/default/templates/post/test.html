@@ -1,0 +1,162 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+    .item {
+        margin-left:15px;
+        margin-top:5px;
+    }
+    .comment-suggest {
+        text-align:right;
+    }
+    div {
+        margin: 0px;
+        padding: 0px;
+    }
+    </style>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".comment-suggest a").click(append_huifu_div);
+        $("#pub-btn").click(btn_hf);
+    });
+
+    function btn_hf()
+    {
+        var txt = document.getElementById("txt-hf");
+        var node = document.createElement("div");
+        node.setAttribute("class", "item");
+        node.setAttribute("id", "com-19");
+        node.innerHTML="<div class=comment-head><span><a href=#>kk</a><span>2018年3月20日 17:02</span></span></div><div class=comment-body><div class=child-txt-area><p>"+txt.value+"</p></div></div><div class=comment-suggest><span><a href=#>支持</a><a href=#>反对</a><a id=huifu-19 href=javascript:;>回复</a></span></div><div id=div-huifu-19 class=child-txt-area display=none style=display:none></div>";
+        var com_list = $("#com-list");
+        com_list.prepend(node);
+        var obj = $("#huifu-19");
+        obj.click(append_huifu_div);
+    }
+    function hf()
+    {
+        var pid = this.getAttribute("pid");
+        var btn = document.getElementById("pub-btn5");
+        var txt = document.getElementById("txt-huifu");
+        var div_id = "div-huifu-" + pid;
+        var hf_div = document.getElementById(div_id);
+        var node = document.createElement("div");
+        node.setAttribute("class", "item");
+        node.setAttribute("id", "com-17");
+        node.innerHTML="<div class=comment-head><span><a href=#>kk</a><span>2018年3月20日 17:02</span></span></div><div class=comment-body><div class=child-txt-area><p>"+txt.value+"</p></div></div><div class=comment-suggest><span><a href=#>支持</a><a href=#>反对</a><a id=huifu-17 href=javascript:;>回复</a></span></div><div id=div-huifu-17 class=child-txt-area display=none style=display:none></div>";
+        var childid = "push-" + pid;
+        var childnode = document.getElementById(childid);
+        childnode.remove();
+        hf_div.style.display = "none";
+        hf_div.setAttribute("display", "none");
+        hf_div.after(node);
+        var obj = $("#huifu-17");
+        obj.click(append_huifu_div);
+    }
+    function append_huifu_div()
+    {
+        var show_div = $(".item div[display='block']");
+        var aid = this.id;
+        var divid = "div-huifu-" + aid.replace("huifu-", "");
+
+        if (show_div.length>0){
+            var div_id = show_div[0].getAttribute("id");
+            var child_div_id = "push-" + div_id.replace("div-huifu-", "");
+            var childnode = document.getElementById(child_div_id);
+            childnode.remove();
+            show_div[0].style.display = "none";
+            show_div[0].setAttribute("display", "none");
+            if (div_id == divid)  // 如果是当前的关闭了就退出
+            {
+                return;
+            }
+        }
+        var ediv = document.getElementById(divid);
+        if (ediv.style.display == "none")
+        {
+            var node = document.createElement("div");
+            var nodeid = "push-" + aid.replace("huifu-", "");
+            node.setAttribute("id", nodeid);
+            node.innerHTML = "<div><textarea class=txt-huifu id=txt-huifu name=txt-huifu style=width:545px></textarea></div><div><input type=button id=pub-btn5 value=评论></div>";
+            ediv.appendChild(node);
+            var a_obj = $('#pub-btn5');
+            a_obj.attr("pid", aid.replace("huifu-", ""));
+            a_obj.click(hf);
+            ediv.style.display = "block";
+            ediv.setAttribute("display", "block");
+        }
+        else {
+            var nodeid = "push-" + aid.replace("huifu-", "");
+            var childnode = document.getElementById(nodeid);
+            ediv.removeChild(childnode);
+            ediv.style.display = "none";
+            ediv.setAttribute("display", "none");
+        }
+
+    }
+    </script>
+
+</head>
+<body>
+<div class="content">
+    <p>
+        明明只给自己买点贵东西，非要管这叫“给自己投资”，满目都是诸如“30岁的女人适合投资一件高档羊绒大衣”、“25岁的女孩适合投资叉叉包包”，可去你的吧！今天中午我鼓起勇气为自己投资了一份宝贵的炸鸡，超过1000大卡，附带大量的多巴胺分泌，未来的自己将升值3斤！惊喜不惊喜！（@小波福娃）
+    </p>
+</div>
+<div id="push" style="width:800px; margin:20px;">
+    <div>
+        <textarea class="txt-huifu" id="txt-hf" name="txt-huifu" style="width:745px"></textarea>
+    </div>
+    <div>
+        <input type="button" id="pub-btn" value="评论">
+    </div>
+    <hr/>
+</div>
+
+<div id="com-list" class="comment-list" style="width:800px;">
+  <div class="item" id="com-7">
+        <div class="comment-head">
+          <span>
+            <a href="#">kk</a>
+            <span>2018年3月20日 17:02</span></span>
+        </div>
+        <div class="comment-body">
+          <div class="child-txt-area">
+            <p>写的不错</p>
+          </div>
+        </div>
+        <div class="comment-suggest">
+          <span>
+            <a id="zan-7" href="#">支持</a>
+            <a id="cai-7" href="#">反对</a>
+            <a id="huifu-7" href="javascript:;">回复</a>
+          </span>
+        </div>
+        <div id="div-huifu-7" class="child-txt-area" display="none" style="display:none"></div>
+
+        <div class="item" id="com-8">
+            <div class="comment-head">
+              <span>
+                <a href="#">kylin</a>
+                <span>@kk</span>
+                <span>2018年3月20日 17:02</span></span>
+            </div>
+            <div class="comment-body">
+              <div class="child-txt-area">
+                <p>写的不错</p>
+              </div>
+            </div>
+            <div class="comment-suggest">
+              <span>
+                <a id="zan-8" href="#">支持</a>
+                <a id="cai-8" href="#">反对</a>
+                <a id="huifu-8" href="javascript:;">回复</a>
+              </span>
+            </div>
+            <div id="div-huifu-8" class="child-txt-area" display="none" style="display:none"></div>
+        </div>
+  </div>
+  <hr/>
+</div>
+</body>
+</html>

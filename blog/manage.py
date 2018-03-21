@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/home/kk/.virtualenvs/blog-env/bin/python
 import os
 import sys
 
 if __name__ == "__main__":
     reload(sys)
     sys.setdefaultencoding("utf8")
-    profile = os.environ.get('TYPE_PROFILE', 'develop')
+    profile = os.environ.get('TYPE_PROFILE', 'product')
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blog.settings.%s" %profile)
     try:
         from django.core.management import execute_from_command_line

@@ -10,7 +10,9 @@ from django.db import connection
 from django.views.generic.base import ContextMixin
 from django.views.generic import ListView, DetailView
 from django.core.cache import caches
+from django.core.cache import cache
 from django.contrib.auth.models import User
+import hashlib
 
 from .models import Post
 from .models import Category
@@ -55,6 +57,10 @@ class CommonContextMixin(ContextMixin):
         links = Link.objects.filter(owner_id=self.owner.id, status=1).order_by('weight')
         return {'links': links}
 
+    def get_hot_post(self):
+        hot_post = Post.objects.filter(owner_id=self.owner.id, status=1).order_by('-pv')
+        return {'hot_post': hot_post}
+
     def get_common_context(self):
         context = {"username": self.username}
         context.update(self.get_links_context())
@@ -62,6 +68,7 @@ class CommonContextMixin(ContextMixin):
         context.update(self.get_sidebars_context())
         context.update(self.get_tags_context())
         context.update(self.get_categories_context())
+        context.update(self.get_hot_post())
         return context
 
     def get_context_data(self, **kwargs):
@@ -90,7 +97,20 @@ class BasePostView(ListView, CommonContextMixin):
         queryset = super(BasePostView, self).get_queryset()
         return queryset.filter(owner_id=self.owner.id)
 
+    def get_context_data(self, **kwargs):
+        context = super(BasePostView, self).get_context_data(**kwargs)
+        for post in context['posts']:
+            postpv_count_key = "count:Post:pv:{}".format(post.id)
+            postuv_count_key = "count:Post:uv:{}".format(post.id)
 
+            pv = cache.get(postpv_count_key, None)
+            if pv:
+                post.pv = pv
+            uv = cache.get(postuv_count_key, None)
+            if uv:
+                post.uv = uv
+        return context
+        
 class IndexView(BasePostView):
     extra_context = {'title': "Kylin的技术博客"}
 
@@ -178,38 +198,55 @@ class PostDetailView(DetailView, CommonContextMixin):
             next_post = None
         
         self.extra_context = {'prev_post': prev_post, 'next_post': next_post}
-        
+        self.incr_pvuv()
+        self.get_pvuv()
         return super(PostDetailView, self).get_context_data(**kwargs)
-    
+   
+    def get_pvuv(self):
+        postpv_count_key = "count:Post:pv:{}".format(self.object.id)
+        postuv_count_key = "count:Post:uv:{}".format(self.object.id)
+
+        pv = cache.get(postpv_count_key, None)
+        if pv:
+            self.object.pv = pv
+        uv = cache.get(postuv_count_key, None)
+        if uv:
+            self.object.uv = uv
 
     def incr_pvuv(self):
-        sessionid = self.request.COOKIES.get('sessionid')
+        sessionid = self.request.COOKIES.get('_uid', None)
         if not sessionid:
-            return
+            agent = self.request.META['HTTP_USER_AGENT']
+            addr = self.request.META['REMOTE_ADDR']
+            salt = "4325u9034u2569@#()*Q&($%)"
+            key_str = "{}:{}:{}".format(agent, addr, salt)
+            key = hashlib.md5(key_str).hexdigest()  # 没有区分无痕浏览器
+            sessionid = key
+        
+        self._uid = sessionid
+
         postpv_flag_key = "{1}:flag:Post:pv:{0}".format(self.object.id, sessionid)
         postpv_count_key = "count:Post:pv:{}".format(self.object.id)
         postuv_flag_key = "{1}:flag:Post:uv:{0}".format(self.object.id, sessionid)
         postuv_count_key = "count:Post:uv:{}".format(self.object.id)
 
-        print sessionid, postuv_count_key, postuv_flag_key, postpv_count_key, postpv_flag_key
-
         post = self.model.objects.get(id=self.object.id)
 
-        if not caches['count'].get(postpv_count_key, None):
-            caches['count'].set(postpv_count_key, post.pv, timeout=None)
-        if not caches['count'].get(postuv_count_key, None):
-            caches['count'].set(postuv_count_key, post.uv, timeout=None)
+        if not cache.get(postpv_count_key, None):
+            cache.set(postpv_count_key, post.pv, timeout=None)
+        if not cache.get(postuv_count_key, None):
+            cache.set(postuv_count_key, post.uv, timeout=None)
         
-        if not caches['flag'].get(postpv_flag_key, None):
-            caches['flag'].set(postpv_flag_key, 1, 5*60)
-            caches['count'].incr(postpv_count_key)
-        if not caches['flag'].get(postuv_flag_key, None):
-            caches['flag'].set(postuv_flag_key, 1, 8*60*60)
-            caches['count'].incr(postuv_count_key)
-
+        if not cache.get(postpv_flag_key, None):
+            cache.set(postpv_flag_key, 1, 5*60)
+            cache.incr(postpv_count_key)
+        if not cache.get(postuv_flag_key, None):
+            cache.set(postuv_flag_key, 1, 8*60*60)
+            cache.incr(postuv_count_key)
+        
     def get(self, request, *args, **kwargs):
         ret =  super(PostDetailView, self).get(request, *args, **kwargs)
-        self.incr_pvuv()
+        ret.set_cookie('_uid', self._uid)
         return ret
 
 
@@ -244,4 +281,5 @@ def test_m2m(request):
     
     return HttpResponse('hello')
 
-
+def test(request):
+    return render(request, "post/test.html", context={})

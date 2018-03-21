@@ -120,6 +120,20 @@
                         {% endif %}
                     {% endif %}
 
+
+                    {% if sidebars.hot_post %}
+                        {% if hot_post %}
+                        <div>
+                            <h3>{{ sidebars.hot_post.title }}</h3>
+                            <ul class="list-unstyled">
+                                {% for post in hot_post %}
+                                    <li><a href="{% url 'post_detail' username post.id %}">{{ post.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+
                 </div>
             </div>
           </div>

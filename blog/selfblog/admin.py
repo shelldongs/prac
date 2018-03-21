@@ -50,9 +50,9 @@ class PostAdmin(BaseOwnerAdmin):
     def get_list_display(self, request):
         if request.user.is_superuser:
             return ('title', 'set_on_top', 'owner', 'category', 
-                    'created_time', 'status', 'my_delete')
+                    'created_time', 'status', 'my_delete', 'pv', 'uv')
         else:
-            return ('title', 'set_on_top', 'category', 'created_time', 'status', 'my_delete')
+            return ('title', 'set_on_top', 'category', 'created_time', 'status', 'my_delete', 'pv', 'uv')
     
     list_display = ('category',) 
     list_filter = ('category__name', 'status', 'owner__username', 'tags')

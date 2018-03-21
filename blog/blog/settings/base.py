@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    #'blog.headmiddle.HeadMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -64,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    #'blog.createsession.CreateSessionMiddleware',
     #'blog.queriesmiddle.QueriesMiddleware',
 ]
 
@@ -103,26 +105,6 @@ CACHES = {
     "default": {
                 "BACKEND": "django_redis.cache.RedisCache",
                 "LOCATION": "redis://127.0.0.1:6379/0",
-        "OPTIONS": {
-                        "CLIENT_CLASS": "django_redis.client.DefaultClient",
-                        "PASSWORD": "kk123456",
-                        "IGNORE_EXCEPTIONS": True,                    
-        }
-            
-    },
-    "count": {
-                "BACKEND": "django_redis.cache.RedisCache",
-                "LOCATION": "redis://127.0.0.1:6379/3",
-        "OPTIONS": {
-                        "CLIENT_CLASS": "django_redis.client.DefaultClient",
-                        "PASSWORD": "kk123456",
-                        "IGNORE_EXCEPTIONS": True,                    
-        }
-            
-    },
-    "flag": {
-                "BACKEND": "django_redis.cache.RedisCache",
-                "LOCATION": "redis://127.0.0.1:6379/5",
         "OPTIONS": {
                         "CLIENT_CLASS": "django_redis.client.DefaultClient",
                         "PASSWORD": "kk123456",

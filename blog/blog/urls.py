@@ -18,18 +18,20 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 from .custom_site import cus_site
-from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView
+from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test
+
 
 urlpatterns = [
+    url(r"^test$", test),
+    url(r'^self/admin/', admin.site.urls),
+    url(r'^self/blog_admin/', cus_site.urls),
+    url(r'^blog/', include('selfblog.urls')),
     url(r'^search$', SearchView.as_view(), name="search_post"),
     url(r'^(?P<author_name>\w+)$', IndexView.as_view(), name="post_list"),
     url(r'^(?P<author_name>\w+)/post/(?P<post_id>\d+)$', PostDetailView.as_view(), name="post_detail"),
     url(r'^(?P<author_name>\w+)/category/(?P<category_id>\d+)$', CategoryView.as_view(), name="category_post_list"),
     url(r'^(?P<author_name>\w+)/tag/(?P<tag_id>\d+)$', TagView.as_view(), name="tag_post_list"),
     
-    url(r'^admin/', admin.site.urls),
-    url(r'^blog_admin/', cus_site.urls),
-    url(r'^blog/', include('selfblog.urls')),
 ]
 
 
