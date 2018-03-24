@@ -1255,3 +1255,935 @@ Not Found: /favicon.ico
 Not Found: /favicon.ico
 [21/Mar/2018 20:40:27] "GET /favicon.ico HTTP/1.1" 404 3113
 [21/Mar/2018 20:41:15] "GET /test HTTP/1.1" 200 6427
+Not Found: /http:/www.baidu.com/
+[22/Mar/2018 02:20:18] "GET http://www.baidu.com/ HTTP/1.1" 404 1660
+Not Found: /http:/wujieliulan.com/
+[22/Mar/2018 02:20:18] "GET http://wujieliulan.com/ HTTP/1.1" 404 1668
+Not Found: /http:/www.123cha.com/
+[22/Mar/2018 02:20:18] "GET http://www.123cha.com/ HTTP/1.1" 404 1664
+Not Found: /http:/www.epochtimes.com/
+[22/Mar/2018 02:20:18] "GET http://www.epochtimes.com/ HTTP/1.1" 404 1680
+Not Found: /http:/www.bing.com/
+[22/Mar/2018 02:20:18] "GET http://www.bing.com/ HTTP/1.1" 404 1656
+Not Found: /http:/www.boxun.com/
+[22/Mar/2018 02:20:18] "GET http://www.boxun.com/ HTTP/1.1" 404 1660
+Not Found: /http:/www.minghui.org/
+[22/Mar/2018 02:20:19] "GET http://www.minghui.org/ HTTP/1.1" 404 1668
+Not Found: /http:/www.rfa.org/
+[22/Mar/2018 02:20:19] "GET http://www.rfa.org/ HTTP/1.1" 404 1652
+Not Found: /http:/www.bing.com/
+[22/Mar/2018 02:21:16] "GET http://www.bing.com/ HTTP/1.1" 404 1656
+Not Found: /http:/wujieliulan.com/
+[22/Mar/2018 02:21:16] "GET http://wujieliulan.com/ HTTP/1.1" 404 1668
+Not Found: /http:/www.minghui.org/
+[22/Mar/2018 02:21:16] "GET http://www.minghui.org/ HTTP/1.1" 404 1668
+Not Found: /http:/www.boxun.com/
+[22/Mar/2018 02:21:16] "GET http://www.boxun.com/ HTTP/1.1" 404 1660
+Not Found: /http:/www.rfa.org/
+[22/Mar/2018 02:21:16] "GET http://www.rfa.org/ HTTP/1.1" 404 1652
+Not Found: /http:/www.123cha.com/
+[22/Mar/2018 02:21:17] "GET http://www.123cha.com/ HTTP/1.1" 404 1664
+Not Found: /http:/www.epochtimes.com/
+[22/Mar/2018 02:21:17] "GET http://www.epochtimes.com/ HTTP/1.1" 404 1680
+Not Found: /http:/www.baidu.com/
+[22/Mar/2018 02:21:17] "GET http://www.baidu.com/ HTTP/1.1" 404 1660
+Not Found: /www.voanews.com:443
+[22/Mar/2018 02:21:17] "CONNECT www.voanews.com:443 HTTP/1.0" 404 1666
+[22/Mar/2018 03:05:39] "GET /test HTTP/1.1" 200 6427
+[22/Mar/2018 03:05:39] "GET /test HTTP/1.1" 200 6427
+[22/Mar/2018 14:35:47] "GET /kylin HTTP/1.1" 200 16800
+[22/Mar/2018 14:35:47] "GET /static/css/base.css HTTP/1.1" 200 128
+[22/Mar/2018 14:35:47] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+Not Found: /favicon.ico
+[22/Mar/2018 14:35:48] "GET /favicon.ico HTTP/1.1" 404 3113
+[22/Mar/2018 14:35:56] "GET /kylin HTTP/1.1" 200 16800
+[22/Mar/2018 14:35:56] "GET /static/css/base.css HTTP/1.1" 304 0
+[22/Mar/2018 14:35:56] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[22/Mar/2018 14:36:03] "GET /kylin/category/5 HTTP/1.1" 200 11932
+[22/Mar/2018 14:36:19] "GET /kylin HTTP/1.1" 200 16800
+Not Found: /
+[22/Mar/2018 14:36:24] "GET / HTTP/1.1" 404 3062
+[22/Mar/2018 14:36:34] "GET /kylin HTTP/1.1" 200 16800
+[22/Mar/2018 14:36:34] "GET /static/css/base.css HTTP/1.1" 200 128
+Not Found: /
+[22/Mar/2018 14:36:54] "GET / HTTP/1.1" 404 3062
+[22/Mar/2018 14:38:15] "GET /kylin/category/5 HTTP/1.1" 200 11932
+[22/Mar/2018 14:38:15] "GET /static/css/base.css HTTP/1.1" 304 0
+[22/Mar/2018 14:38:15] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[22/Mar/2018 15:04:49] "GET /kylin/category/5 HTTP/1.1" 200 11932
+[22/Mar/2018 15:05:17] "GET /kylin/category/5 HTTP/1.1" 200 11932
+[22/Mar/2018 15:05:17] "GET /static/css/base.css HTTP/1.1" 200 128
+[22/Mar/2018 19:46:12] "GET /kk/post/1 HTTP/1.1" 200 8053
+[22/Mar/2018 19:46:12] "GET /static/css/base.css HTTP/1.1" 200 128
+Not Found: /favicon.ico
+[22/Mar/2018 19:46:12] "GET /favicon.ico HTTP/1.1" 404 3113
+Not Found: /
+[23/Mar/2018 08:39:23] "GET / HTTP/1.1" 404 3062
+Not Found: /favicon.ico
+[23/Mar/2018 08:39:24] "GET /favicon.ico HTTP/1.1" 404 3113
+Not Found: /
+[23/Mar/2018 08:39:51] "GET / HTTP/1.1" 404 3058
+Not Found: /
+[23/Mar/2018 08:40:08] "GET / HTTP/1.1" 404 3062
+Not Found: /
+[23/Mar/2018 08:40:08] "GET / HTTP/1.1" 404 3062
+[23/Mar/2018 18:21:59] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:21:59] "GET /static/css/base.css HTTP/1.1" 304 0
+[23/Mar/2018 18:22:00] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+Not Found: /favicon.ico
+[23/Mar/2018 18:22:00] "GET /favicon.ico HTTP/1.1" 404 3113
+[23/Mar/2018 18:22:06] "GET /kylin/post/8 HTTP/1.1" 200 11837
+[23/Mar/2018 18:22:10] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:22:11] "GET /kylin/category/5 HTTP/1.1" 200 11932
+[23/Mar/2018 18:22:12] "GET /kylin/category/6 HTTP/1.1" 200 12757
+[23/Mar/2018 18:22:12] "GET /kylin/category/8 HTTP/1.1" 200 11935
+[23/Mar/2018 18:22:13] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:22:26] "GET /kylin/post/8 HTTP/1.1" 200 11837
+[23/Mar/2018 18:22:32] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:22:33] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:22:35] "GET /kylin/category/5 HTTP/1.1" 200 11932
+[23/Mar/2018 18:22:36] "GET /kylin/category/4 HTTP/1.1" 200 14816
+[23/Mar/2018 18:22:36] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:22:37] "GET /kylin/category/8 HTTP/1.1" 200 11935
+[23/Mar/2018 18:22:38] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:22:45] "GET /kylin/post/8 HTTP/1.1" 200 11837
+[23/Mar/2018 18:22:52] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:23:30] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:23:31] "GET /static/css/base.css HTTP/1.1" 200 128
+[23/Mar/2018 18:23:31] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+[23/Mar/2018 18:23:38] "GET /kylin/post/8 HTTP/1.1" 200 11837
+[23/Mar/2018 18:24:00] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:24:38] "GET /kylin/post/8 HTTP/1.1" 200 11837
+[23/Mar/2018 18:43:16] "GET /kylin HTTP/1.1" 200 16800
+[23/Mar/2018 18:43:16] "GET /static/css/base.css HTTP/1.1" 200 128
+[23/Mar/2018 18:43:17] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+[23/Mar/2018 20:26:48] "GET /kylin/post/8 HTTP/1.1" 200 17342
+Forbidden (CSRF token missing or incorrect.): /comment
+[23/Mar/2018 20:27:00] "POST /comment HTTP/1.1" 403 2497
+Forbidden (CSRF token missing or incorrect.): /comment
+[23/Mar/2018 20:27:22] "POST /comment HTTP/1.1" 403 2497
+Forbidden (CSRF token missing or incorrect.): /comment
+[23/Mar/2018 20:27:31] "POST /comment HTTP/1.1" 403 2497
+[23/Mar/2018 20:33:18] "GET /kylin/post/8 HTTP/1.1" 200 17496
+Forbidden (CSRF token missing or incorrect.): /comment
+[23/Mar/2018 20:33:25] "POST /comment HTTP/1.1" 403 2497
+[23/Mar/2018 20:37:47] "GET /kylin/post/8 HTTP/1.1" 200 17513
+Forbidden (CSRF token missing or incorrect.): /comment
+[23/Mar/2018 20:38:04] "POST /comment HTTP/1.1" 403 2497
+Forbidden (CSRF token missing or incorrect.): /comment
+[23/Mar/2018 20:39:16] "POST /comment HTTP/1.1" 403 2497
+[23/Mar/2018 20:39:19] "GET /kylin/post/8 HTTP/1.1" 200 17513
+Forbidden (CSRF token missing or incorrect.): /comment
+[23/Mar/2018 20:39:50] "POST /comment HTTP/1.1" 403 2497
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 21, 2018 - 20:38:54
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7fdad3b7ac08>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kk/prac/blog/blog/urls.py", line 21, in <module>
+    from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test, comment
+ImportError: cannot import name comment
+[23/Mar/2018 20:46:07] "GET /kylin/post/8 HTTP/1.1" 200 17496
+[23/Mar/2018 20:46:10] "POST /comment HTTP/1.1" 200 2
+[23/Mar/2018 20:46:19] "GET /kylin/post/8 HTTP/1.1" 200 17496
+[23/Mar/2018 20:49:09] "POST /comment HTTP/1.1" 200 2
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 23, 2018 - 20:46:04
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 23, 2018 - 20:56:44
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 23, 2018 - 21:01:50
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7f392d326e60>
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 235, in wrapper
+    filename = traceback.extract_tb(tb)[-1][0]
+  File "/usr/lib/python2.7/traceback.py", line 101, in extract_tb
+    line = linecache.getline(filename, lineno, f.f_globals)
+  File "/home/kk/.virtualenvs/blog-env/lib/python2.7/linecache.py", line 14, in getline
+    lines = getlines(filename, module_globals)
+  File "/home/kk/.virtualenvs/blog-env/lib/python2.7/linecache.py", line 41, in getlines
+    return updatecache(filename, module_globals)
+  File "/home/kk/.virtualenvs/blog-env/lib/python2.7/linecache.py", line 138, in updatecache
+    cache[filename] = size, mtime, lines, fullname
+TypeError: 'NoneType' object does not support item assignment
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:02:20
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:05:03
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:07:29
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 3 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:08:02
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 4 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:08:40
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[23/Mar/2018 21:12:09] "GET /kylin/post/8 HTTP/1.1" 200 17520
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 297, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:12:14] "POST /comment HTTP/1.1" 500 16257
+[23/Mar/2018 21:12:20] "GET /kylin/post/8 HTTP/1.1" 200 17520
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 297, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:12:36] "POST /comment HTTP/1.1" 500 16165
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:11:13
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[23/Mar/2018 21:13:34] "GET /kylin/post/8 HTTP/1.1" 200 17520
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:13:36] "POST /comment HTTP/1.1" 500 16165
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:13:44] "POST /comment HTTP/1.1" 500 16165
+[23/Mar/2018 21:13:52] "GET /kylin/category/4 HTTP/1.1" 200 14851
+[23/Mar/2018 21:13:56] "GET /kylin HTTP/1.1" 200 16835
+[23/Mar/2018 21:13:57] "GET /kylin/category/4 HTTP/1.1" 200 14851
+[23/Mar/2018 21:13:57] "GET /kylin/post/10 HTTP/1.1" 200 18079
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:14:05] "POST /comment HTTP/1.1" 500 16167
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:13:31
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): comment.
+Run 'python manage.py migrate' to apply them.
+March 23, 2018 - 21:18:58
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7feeae2198c0>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kk/prac/blog/blog/urls.py", line 21, in <module>
+    from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test, comment
+  File "/home/kk/prac/blog/selfblog/views.py", line 23, in <module>
+    from comment.models import Comment
+  File "/home/kk/prac/blog/comment/models.py", line 9, in <module>
+    class Comment(models.Model):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 118, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class comment.models.Comment doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+[23/Mar/2018 21:24:13] "GET /kylin HTTP/1.1" 200 16835
+[23/Mar/2018 21:24:15] "GET /kylin/post/8 HTTP/1.1" 200 17520
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:24:18] "POST /comment HTTP/1.1" 500 16164
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:24:19] "POST /comment HTTP/1.1" 500 16164
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:24:19] "POST /comment HTTP/1.1" 500 16164
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:24:19] "POST /comment HTTP/1.1" 500 16164
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:24:19] "POST /comment HTTP/1.1" 500 16164
+[23/Mar/2018 21:39:29] "GET /kylin HTTP/1.1" 200 16835
+[23/Mar/2018 21:39:32] "GET /kylin/post/8 HTTP/1.1" 200 17520
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:53] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:54] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:55] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:56] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:56] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:56] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:56] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:56] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:57] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:57] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:39:57] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:40:00] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:40:00] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:40:00] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:40:00] "POST /comment HTTP/1.1" 500 16401
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 299, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[23/Mar/2018 21:40:01] "POST /comment HTTP/1.1" 500 16401
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 23, 2018 - 21:23:49
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7f26e8e44aa0>
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 117, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 250, in raise_last_exception
+    six.reraise(*_exception)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/apps/config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kk/prac/blog/comment/models.py", line 9, in <module>
+    class Comment(models.Model):
+  File "/home/kk/prac/blog/comment/models.py", line 14, in Comment
+    target = models.CharField(defatul='/', max_length=100, verbose_name="target")
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 1061, in __init__
+    super(CharField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'defatul'

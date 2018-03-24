@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 from .custom_site import cus_site
-from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test
+from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test, comment
 
 
 urlpatterns = [
+    url(r"^comment$", comment),
     url(r"^test$", test),
     url(r'^self/admin/', admin.site.urls),
     url(r'^self/blog_admin/', cus_site.urls),

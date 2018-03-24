@@ -1,8 +1,31 @@
 {% extends "post/base.html" %}
 
 {% block title %}
-    {{ post.title }} | {{ post.category.name }} | Kylin的技术博客 
+    {{ post.title }} | {{ post.category.name }} | Kylin的技术博客
 {% endblock %}
+
+{% block csscode %}
+<style type="text/css">
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+.item {
+    margin-left:15px;
+    margin-top:5px;
+}
+.comment-suggest {
+    text-align:right;
+}
+a {
+    text-decoration: none;
+    margin-right:10px;
+}
+</style>
+{% endblock %}
+
 
 {% block content %}
     <ol class="breadcrumb">
@@ -32,14 +55,14 @@
                 {% if prev_post %}
                     <a href="{% url 'post_detail' username prev_post.id %}">{{ prev_post.title }}</a>
                 {% else %}
-                    没有了        
+                    没有了
                 {% endif %}
             </li>
             <li><span>下一篇:</span>
                 {% if next_post %}
                     <a href="{% url 'post_detail' username next_post.id %}">{{ next_post.title }}</a>
                 {% else %}
-                    没有了        
+                    没有了
                 {% endif %}
             </li>
         </ul>
@@ -48,5 +71,128 @@
     <div style="text-align: right">
         posted @ {{ post.created_time }}  阅读{{ post.pv }}, {{ post.uv }} 评论(19) 编辑
     </div>
+    <input type="hidden" id="csrf_token" name="csrf_token" value={{ csrf_token }}/>
+    <div id="push" class="txt-huifu">
+    	<div class="form-group shadow-textarea">
+    		<label for="txt-hf">评论：</label>
+    		<textarea class="form-control z-depth-1" id="txt-hf"  name="txt-huifu" rows="3" placeholder="发布新评论..."></textarea>
+    	</div>
+        <div style="margin-bottom:80px">
+    	<button type="button" id="pub-btn" class="btn btn-primary" style="width:80px; position:absolute;
+    right:16px;">点评</button>
+        </div>
+    </div>
+    <div id="com-list" class="comment-list"></div>
 
+
+{% endblock %}
+
+{% block jscode %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).on('click', '.comment-suggest a', append_huifu_div);
+    $(document).on('click', '#pub-btn5', hf);
+    $("#pub-btn").click(btn_hf);
+});
+
+function btn_hf()
+{
+    var node = document.createElement("div");
+    var target = document.location.pathname;
+    var txt = $('#txt-hf').val();
+    var csrf = $('#csrf_token').val();
+    var ret_data;
+    $.ajax({
+         type : "POST",
+         url : "http://101.236.5.18:800/comment",
+         data : {
+          "pid" : 0,
+          "target": target,
+          "txt": txt,
+          "csrf_token": csrf,
+         },
+         success : function(data, textStatus,jqXHR ) {
+             ret_data = data;
+             node.setAttribute("class", "item");
+             node.setAttribute("id", "com-"+ret_data['id']);
+             node.innerHTML="<div class=comment-head><span><a href=#>kk</a><span>"+ret_data['created_time']+"</span></span></div><div class=comment-body><div class=child-txt-area><p>"+ret_data['txt']+"</p></div></div><div class=comment-suggest><span><a href=#>支持</a><a href=#>反对</a><a id='huifu-" + ret_data['id'] + "' href=javascript:;>回复</a></span></div><div id='div-huifu-" + ret_data['id'] + "'class=child-txt-area display=none style=display:none></div>";
+             var com_list = $("#com-list");
+             com_list.prepend(node);
+         }
+        });
+}
+
+function hf()
+{
+    var pid = this.getAttribute("pid");
+    var btn = document.getElementById("pub-btn5");
+    var target = document.location.pathname;
+    var txt = $('#txt-huifu').val();
+    var csrf = $('#csrf_token').val();
+    $.ajax({
+         type : "POST",
+         url : "http://101.236.5.18:800/comment",
+         data : {
+          "pid" : pid,
+          "target": target,
+          "txt": txt,
+          "csrf_token": csrf,
+         },
+         success : function(data, textStatus,jqXHR ) {
+             ret_data = data;
+             var div_id = "div-huifu-" + pid;
+             var hf_div = document.getElementById(div_id);
+             var node = document.createElement("div");
+             node.setAttribute("class", "item");
+             node.setAttribute("id", "com-"+ret_data['id']);
+             node.innerHTML="<div class=comment-head><span><a href=#>kk</a><span>"+ret_data['created_time']+"</span></span></div><div class=comment-body><div class=child-txt-area><p>"+ret_data['txt']+"</p></div></div><div class=comment-suggest><span><a href=#>支持</a><a href=#>反对</a><a id='huifu-" + ret_data['id'] + "' href=javascript:;>回复</a></span></div><div id='div-huifu-" + ret_data['id'] + "'class=child-txt-area display=none style=display:none></div>";
+             var childid = "push-" + pid;
+             var childnode = document.getElementById(childid);
+             childnode.remove();
+             hf_div.style.display = "none";
+             hf_div.setAttribute("display", "none");
+             $('#'+div_id).after(node);
+         }
+        });
+}
+function append_huifu_div()
+{
+    var show_div = $(".item div[display='block']");
+    var aid = this.id;
+    var divid = "div-huifu-" + aid.replace("huifu-", "");
+
+    if (show_div.length>0){
+        var div_id = show_div[0].getAttribute("id");
+        var child_div_id = "push-" + div_id.replace("div-huifu-", "");
+        $('#'+child_div_id).remove();
+        show_div[0].style.display = "none";
+        show_div[0].setAttribute("display", "none");
+        if (div_id == divid)  // 如果是当前的关闭了就退出
+        {
+            return;
+        }
+    }
+    var ediv = document.getElementById(divid);
+    if (ediv.style.display == "none")
+    {
+        var node = document.createElement("div");
+        var nodeid = "push-" + aid.replace("huifu-", "");
+        node.setAttribute("id", nodeid);
+        node.innerHTML = "<div class='form-group shadow-textarea'><label for='txt-hf'>评论：</label><textarea class='form-control z-depth-1' id='txt-huifu'  name='txt-huifu' rows='2' placeholder='发布新评论...'></textarea></div><div style='margin-bottom:80px'><button type='button' id='pub-btn5' class='btn btn-primary' style='width:80px; position:absolute;right:16px;'>点评</button></div>";
+        ediv.appendChild(node);
+        var a_obj = $('#pub-btn5');
+        a_obj.attr("pid", aid.replace("huifu-", ""));
+        ediv.style.display = "block";
+        ediv.setAttribute("display", "block");
+    }
+    else {
+        var nodeid = "push-" + aid.replace("huifu-", "");
+        var childnode = document.getElementById(nodeid);
+        ediv.removeChild(childnode);
+        ediv.style.display = "none";
+        ediv.setAttribute("display", "none");
+    }
+
+}
+</script>
 {% endblock %}

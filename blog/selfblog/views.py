@@ -4,7 +4,7 @@ import pdb
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, JsonResponse
 from django.test.utils import override_settings
 from django.db import connection
 from django.views.generic.base import ContextMixin
@@ -13,11 +13,14 @@ from django.core.cache import caches
 from django.core.cache import cache
 from django.contrib.auth.models import User
 import hashlib
+from django.utils.html import escape
+
 
 from .models import Post
 from .models import Category
 from .models import Tag
 from config.models import Link, SideBar 
+from comment.models import Comment
 
 
 PAGE_SIZE = 6
@@ -280,6 +283,24 @@ def test_m2m(request):
     print connection.queries
     
     return HttpResponse('hello')
+
+
+from django.views.decorators.csrf import csrf_exempt
+import datetime
+
+@csrf_exempt
+def comment(request):
+    pid = request.POST.get("pid")
+    if not pid:
+        pid = None
+    target = request.POST.get("target")
+    txt = request.POST.get("txt")
+    txt = escape(txt)
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+    
+    return JsonResponse({'id': com.id, 'txt': txt, 'created_time': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
+
+
 
 def test(request):
     return render(request, "post/test.html", context={})

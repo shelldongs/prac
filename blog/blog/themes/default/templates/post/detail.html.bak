@@ -1,0 +1,52 @@
+{% extends "post/base.html" %}
+
+{% block title %}
+    {{ post.title }} | {{ post.category.name }} | Kylin的技术博客 
+{% endblock %}
+
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="/{{ username }}">首页</a></li>
+        <li><a href="{% url 'category_post_list' username post.category_id %}">{{ post.category.name }}</a></li>
+        <li>正文</li>
+    </ol>
+    <div style="text-align:center">
+        <h2>{{ post.title  }}</h2>
+    </div>
+    <div>
+        {{ post.content }}
+    </div>
+    <br>
+    <div>
+        <ul class="list-inline">
+            <li>标签:</li>
+            {% for tag in post.tags.all %}
+                <li><a href={% url 'tag_post_list' username tag.id %}> {{ tag.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <br>
+    <div>
+        <ul class="list-unstyled">
+            <li><span>上一篇:</span>
+                {% if prev_post %}
+                    <a href="{% url 'post_detail' username prev_post.id %}">{{ prev_post.title }}</a>
+                {% else %}
+                    没有了        
+                {% endif %}
+            </li>
+            <li><span>下一篇:</span>
+                {% if next_post %}
+                    <a href="{% url 'post_detail' username next_post.id %}">{{ next_post.title }}</a>
+                {% else %}
+                    没有了        
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+    <hr style="border-top: 1px solid #C0C0C0"/>
+    <div style="text-align: right">
+        posted @ {{ post.created_time }}  阅读{{ post.pv }}, {{ post.uv }} 评论(19) 编辑
+    </div>
+
+{% endblock %}

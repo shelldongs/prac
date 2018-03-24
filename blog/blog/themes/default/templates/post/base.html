@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block csscode %}
+    {% endblock %}
 
     <title>{% block title %}首页{% endblock %}</title>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
@@ -140,5 +142,10 @@
       </div>
       {% block footer %}
       {% endblock %}
+        
+      {% block jscode %}
+      {% endblock %}
+
+
   </body>
 </html>
