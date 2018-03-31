@@ -45,7 +45,7 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'selfblog',
     'config',
-    'comment',
+    'comments',
 
     'django.contrib.admin',
     'django.contrib.auth',

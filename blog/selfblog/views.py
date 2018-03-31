@@ -20,7 +20,7 @@ from .models import Post
 from .models import Category
 from .models import Tag
 from config.models import Link, SideBar 
-from comment.models import Comment
+from comments.models import Comment
 
 
 PAGE_SIZE = 6
@@ -199,7 +199,11 @@ class PostDetailView(DetailView, CommonContextMixin):
             next_post = Post.objects.filter(owner_id=self.owner.id, created_time__lt=post.created_time)[0]
         except IndexError:
             next_post = None
-        
+       
+        p = self.request.path
+        com = Comment.objects.filter(target=p).order_by('pid', '-created_time')
+        kwargs.update({"com": com})
+
         self.extra_context = {'prev_post': prev_post, 'next_post': next_post}
         self.incr_pvuv()
         self.get_pvuv()
@@ -288,15 +292,16 @@ def test_m2m(request):
 from django.views.decorators.csrf import csrf_exempt
 import datetime
 
-@csrf_exempt
 def comment(request):
     pid = request.POST.get("pid")
-    if not pid:
-        pid = None
     target = request.POST.get("target")
     txt = request.POST.get("txt")
     txt = escape(txt)
-    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+    if pid == "0":
+        com = Comment.objects.create(content=txt, nickname='nobody', target=target)
+    else:
+        c = Comment.objects.get(id=pid)
+        com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=c)
     
     return JsonResponse({'id': com.id, 'txt': txt, 'created_time': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
 

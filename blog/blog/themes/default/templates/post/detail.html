@@ -71,7 +71,7 @@ a {
     <div style="text-align: right">
         posted @ {{ post.created_time }}  阅读{{ post.pv }}, {{ post.uv }} 评论(19) 编辑
     </div>
-    <input type="hidden" id="csrf_token" name="csrf_token" value={{ csrf_token }}/>
+    <input type="hidden" id="csrf_token" name="csrf_token" value={{ csrf_token }} />
     <div id="push" class="txt-huifu">
     	<div class="form-group shadow-textarea">
     		<label for="txt-hf">评论：</label>
@@ -104,16 +104,16 @@ function btn_hf()
     var ret_data;
     $.ajax({
          type : "POST",
-         url : "http://101.236.5.18:800/comment",
+         url : "http://101.236.5.18:669/comment",
          data : {
           "pid" : 0,
           "target": target,
           "txt": txt,
-          "csrf_token": csrf,
+          "csrfmiddlewaretoken": csrf,
          },
          success : function(data, textStatus,jqXHR ) {
              ret_data = data;
-             node.setAttribute("class", "item");
+             node.setAttribute("class", "item-pp");
              node.setAttribute("id", "com-"+ret_data['id']);
              node.innerHTML="<div class=comment-head><span><a href=#>kk</a><span>"+ret_data['created_time']+"</span></span></div><div class=comment-body><div class=child-txt-area><p>"+ret_data['txt']+"</p></div></div><div class=comment-suggest><span><a href=#>支持</a><a href=#>反对</a><a id='huifu-" + ret_data['id'] + "' href=javascript:;>回复</a></span></div><div id='div-huifu-" + ret_data['id'] + "'class=child-txt-area display=none style=display:none></div>";
              var com_list = $("#com-list");
@@ -136,7 +136,7 @@ function hf()
           "pid" : pid,
           "target": target,
           "txt": txt,
-          "csrf_token": csrf,
+          "csrfmiddlewaretoken": csrf,
          },
          success : function(data, textStatus,jqXHR ) {
              ret_data = data;
@@ -160,7 +160,7 @@ function append_huifu_div()
     var show_div = $(".item div[display='block']");
     var aid = this.id;
     var divid = "div-huifu-" + aid.replace("huifu-", "");
-
+    alert(show_div.length)
     if (show_div.length>0){
         var div_id = show_div[0].getAttribute("id");
         var child_div_id = "push-" + div_id.replace("div-huifu-", "");
@@ -194,5 +194,29 @@ function append_huifu_div()
     }
 
 }
+
+{% for c in com %}
+{% if not c.pid %}
+var com = document.getElementById("com-list");
+var newli = document.createElement("div");
+newli.setAttribute("class", "item-pp");
+var tmpid = "com-{{ c.id }}"
+newli.setAttribute("id", tmpid)
+newli.innerHTML= "<div class=comment-head><span><a href=#>{{ c.nickname }}</a><span>{{ c.created_time }}</span></span></div><div class=comment-body><div class=child-txt-area><p>{{ c.content }}</p></div></div><div class=comment-suggest><span><a href=#>支持</a><a href=#>反对</a><a id='huifu-" + {{ c.id }} + "' href=javascript:;>回复</a></span></div><div id='div-huifu-" + {{ c.id }} + "'class=child-txt-area display=none style=display:none></div>";
+
+com.appendChild(newli);
+{% else %}
+	var tmp_id ="com-" + {{ c.pid_id }};
+	var com = document.getElementById(tmp_id);
+	var newli = document.createElement("div");
+	newli.setAttribute("class", "item");
+	var tmpid = "com-{{ c.id }}"
+	newli.setAttribute("id", tmpid)
+	newli.innerHTML= "<div class=comment-head><span><a href=#>{{ c.nickname }}</a><span>{{ c.created_time }}</span></span></div><div class=comment-body><div class=child-txt-area><p>{{ c.content }}</p></div></div><div class=comment-suggest><span><a href=#>支持</a><a href=#>反对</a><a id='huifu-" + {{ c.id }} + "' href=javascript:;>回复</a></span></div><div id='div-huifu-" + {{ c.id }} + "'class=child-txt-area display=none style=display:none></div>";
+
+	com.appendChild(newli);
+{% endif %}
+{% endfor %}
+
 </script>
 {% endblock %}

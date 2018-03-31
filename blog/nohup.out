@@ -2187,3 +2187,833 @@ Traceback (most recent call last):
   File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 1061, in __init__
     super(CharField, self).__init__(*args, **kwargs)
 TypeError: __init__() got an unexpected keyword argument 'defatul'
+Unhandled exception in thread started by <function wrapper at 0x7ff4efb4dde8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kk/prac/blog/blog/urls.py", line 21, in <module>
+    from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test, comment
+  File "/home/kk/prac/blog/selfblog/views.py", line 23, in <module>
+    from comment.models import Comment
+  File "/home/kk/prac/blog/comment/models.py", line 9, in <module>
+    class Comment(models.Model):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 118, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class comment.models.Comment doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Unhandled exception in thread started by <function wrapper at 0x7f9f37dabd70>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kk/prac/blog/blog/urls.py", line 21, in <module>
+    from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test, comment
+  File "/home/kk/prac/blog/selfblog/views.py", line 23, in <module>
+    from comment.models import Comment
+  File "/home/kk/prac/blog/comment/models.py", line 9, in <module>
+    class Comment(models.Model):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 118, in __new__
+    "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class comment.models.Comment doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+Unhandled exception in thread started by <function wrapper at 0x7ff24940bd70>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kk/prac/blog/blog/urls.py", line 21, in <module>
+    from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test, comment
+  File "/home/kk/prac/blog/selfblog/views.py", line 23, in <module>
+    from comment.models import Comment
+ImportError: No module named comment.models
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 10:02:14
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[24/Mar/2018 10:07:17] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 10:07:18] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 10:07:18] "GET /static/img/header.jpg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[24/Mar/2018 10:07:18] "GET /favicon.ico HTTP/1.1" 404 3222
+[24/Mar/2018 10:07:19] "GET /kylin/post/8 HTTP/1.1" 200 17520
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'0'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:07:31] "POST /comment HTTP/1.1" 500 16161
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 10:07:06
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[24/Mar/2018 10:08:43] "POST /comment HTTP/1.1" 200 60
+[24/Mar/2018 10:11:31] "POST /comment HTTP/1.1" 200 111
+[24/Mar/2018 10:11:45] "POST /comment HTTP/1.1" 200 63
+[24/Mar/2018 10:15:16] "GET /kylin/post/8 HTTP/1.1" 200 17523
+[24/Mar/2018 10:15:16] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 10:15:16] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 10:15:18] "POST /comment HTTP/1.1" 200 61
+[24/Mar/2018 10:15:22] "POST /comment HTTP/1.1" 200 62
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:25] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:26] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:28] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:28] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:29] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:32] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:32] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:32] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:33] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:33] "POST /comment HTTP/1.1" 500 16160
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:35] "POST /comment HTTP/1.1" 500 16163
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:35] "POST /comment HTTP/1.1" 500 16163
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 300, in comment
+    com = Comment.objects.create(content=txt, nickname='nobody', target=target, pid=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/base.py", line 554, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/related_descriptors.py", line 216, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "u'5'": "Comment.pid" must be a "Comment" instance.
+[24/Mar/2018 10:15:41] "POST /comment HTTP/1.1" 500 16160
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 10:08:40
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[24/Mar/2018 10:17:04] "GET /kylin/post/8 HTTP/1.1" 200 17523
+[24/Mar/2018 10:17:04] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 10:17:04] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 10:17:04] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+[24/Mar/2018 10:17:06] "POST /comment HTTP/1.1" 200 61
+[24/Mar/2018 10:17:08] "POST /comment HTTP/1.1" 200 62
+[24/Mar/2018 10:24:26] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 10:25:00] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 10:25:00] "GET /static/css/base.css HTTP/1.1" 200 128
+[24/Mar/2018 10:26:16] "POST /comment HTTP/1.1" 200 62
+[24/Mar/2018 10:26:23] "POST /comment HTTP/1.1" 200 62
+[24/Mar/2018 10:26:34] "POST /comment HTTP/1.1" 200 62
+[24/Mar/2018 10:26:36] "GET /kylin/post/8 HTTP/1.1" 200 17523
+[24/Mar/2018 10:26:37] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 10:26:37] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 10:26:37] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+[24/Mar/2018 10:26:41] "POST /comment HTTP/1.1" 200 64
+[24/Mar/2018 10:26:45] "POST /comment HTTP/1.1" 200 63
+[24/Mar/2018 10:26:47] "POST /comment HTTP/1.1" 200 64
+[24/Mar/2018 10:26:49] "POST /comment HTTP/1.1" 200 64
+[24/Mar/2018 10:26:49] "POST /comment HTTP/1.1" 200 64
+[24/Mar/2018 10:27:16] "POST /comment HTTP/1.1" 200 62
+[24/Mar/2018 10:28:50] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 10:28:51] "GET /kylin/category/8 HTTP/1.1" 200 11970
+[24/Mar/2018 10:30:58] "GET /kylin/post/6 HTTP/1.1" 200 17580
+[24/Mar/2018 10:34:10] "GET /kylin/post/8 HTTP/1.1" 200 17523
+[24/Mar/2018 10:34:52] "GET /kylin/post/8 HTTP/1.1" 200 17523
+[24/Mar/2018 10:34:52] "GET /static/css/base.css HTTP/1.1" 200 128
+[24/Mar/2018 11:19:37] "POST /comment HTTP/1.1" 200 78
+[24/Mar/2018 11:19:41] "POST /comment HTTP/1.1" 200 66
+[24/Mar/2018 11:20:06] "POST /comment HTTP/1.1" 200 66
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 10:17:02
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[24/Mar/2018 11:37:42] "GET /kylin/category/8 HTTP/1.1" 200 11970
+[24/Mar/2018 11:37:44] "GET /kylin/post/6 HTTP/1.1" 200 17581
+[24/Mar/2018 11:38:17] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 11:38:19] "GET /kylin/post/8 HTTP/1.1" 200 17523
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 11:37:37
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+/kylin/post/6
+/kylin/post/8
+Unhandled exception in thread started by <function wrapper at 0x7f3e1b09bd70>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kk/prac/blog/blog/urls.py", line 21, in <module>
+    from selfblog.views import PostDetailView, IndexView, CategoryView, TagView, SearchView,test, comment
+  File "/home/kk/prac/blog/selfblog/views.py", line 205
+    kwargs.update("com": com)
+                       ^
+SyntaxError: invalid syntax
+[24/Mar/2018 11:41:56] "GET /kylin/post/8 HTTP/1.1" 200 27803
+[24/Mar/2018 11:41:56] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 11:41:56] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 11:42:06] "POST /comment HTTP/1.1" 200 65
+[24/Mar/2018 11:42:08] "GET /kylin/post/8 HTTP/1.1" 200 28460
+[24/Mar/2018 11:42:08] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 11:42:08] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 11:42:08] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+[24/Mar/2018 11:42:19] "GET /kylin/post/2 HTTP/1.1" 200 17572
+[24/Mar/2018 11:42:28] "POST /comment HTTP/1.1" 200 84
+[24/Mar/2018 11:42:35] "POST /comment HTTP/1.1" 200 78
+[24/Mar/2018 11:42:40] "POST /comment HTTP/1.1" 200 84
+[24/Mar/2018 11:42:45] "POST /comment HTTP/1.1" 200 78
+[24/Mar/2018 11:42:49] "POST /comment HTTP/1.1" 200 85
+[24/Mar/2018 11:42:52] "GET /kylin/post/2 HTTP/1.1" 200 20840
+[24/Mar/2018 11:42:52] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 11:42:52] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 11:43:12] "GET /kylin/post/2 HTTP/1.1" 200 20840
+[24/Mar/2018 11:43:12] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 11:43:12] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 11:43:17] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 11:43:20] "GET /kylin/post/8 HTTP/1.1" 200 28460
+[24/Mar/2018 11:43:25] "GET /kylin/post/2 HTTP/1.1" 200 20840
+[24/Mar/2018 11:43:33] "POST /comment HTTP/1.1" 200 63
+[24/Mar/2018 11:43:40] "GET /kylin/post/8 HTTP/1.1" 200 29115
+[24/Mar/2018 11:43:40] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 11:43:40] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 11:43:40] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+[24/Mar/2018 11:43:42] "GET /kylin/post/2 HTTP/1.1" 200 20840
+[24/Mar/2018 11:43:42] "GET /static/css/base.css HTTP/1.1" 200 128
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 11:41:53
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[24/Mar/2018 12:01:33] "GET /kylin/post/8 HTTP/1.1" 200 29115
+[24/Mar/2018 12:01:33] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 12:01:33] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 12:01:38] "GET /kylin/post/2 HTTP/1.1" 200 20840
+[24/Mar/2018 12:01:40] "GET /kylin/post/2 HTTP/1.1" 200 20840
+[24/Mar/2018 12:01:41] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 12:01:41] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 12:01:52] "POST /comment HTTP/1.1" 200 64
+[24/Mar/2018 12:01:55] "GET /kylin/post/2 HTTP/1.1" 200 21471
+[24/Mar/2018 12:01:55] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 12:01:55] "GET /static/img/header.jpg HTTP/1.1" 304 0
+[24/Mar/2018 12:02:01] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 12:02:05] "GET /kylin/post/12 HTTP/1.1" 200 17548
+[24/Mar/2018 12:02:09] "GET /kylin/post/8 HTTP/1.1" 200 29115
+[24/Mar/2018 12:02:11] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 12:02:12] "GET /kylin/post/8 HTTP/1.1" 200 29115
+[24/Mar/2018 12:02:20] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 12:02:23] "GET /kylin/post/12 HTTP/1.1" 200 17548
+[24/Mar/2018 12:02:27] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 12:02:29] "GET /kylin/post/8 HTTP/1.1" 200 29115
+[24/Mar/2018 12:08:12] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 12:08:12] "GET /static/css/base.css HTTP/1.1" 200 128
+[24/Mar/2018 12:08:12] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+[24/Mar/2018 12:08:13] "GET /kylin?page=2 HTTP/1.1" 200 14752
+Not Found: /favicon.ico
+[24/Mar/2018 12:08:13] "GET /favicon.ico HTTP/1.1" 404 3222
+[24/Mar/2018 12:08:18] "GET /kylin/post/8 HTTP/1.1" 200 29115
+[24/Mar/2018 12:08:34] "POST /comment HTTP/1.1" 200 63
+[24/Mar/2018 12:08:39] "POST /comment HTTP/1.1" 200 63
+[24/Mar/2018 12:08:49] "POST /comment HTTP/1.1" 200 63
+[24/Mar/2018 12:08:56] "GET /kylin/post/8 HTTP/1.1" 200 31057
+[24/Mar/2018 12:09:26] "GET /kylin HTTP/1.1" 200 16835
+[24/Mar/2018 12:09:27] "GET /kylin?page=2 HTTP/1.1" 200 14752
+[24/Mar/2018 12:09:30] "GET /kylin/post/11 HTTP/1.1" 200 17658
+[24/Mar/2018 12:09:39] "POST /comment HTTP/1.1" 200 78
+[24/Mar/2018 12:09:46] "POST /comment HTTP/1.1" 200 72
+[24/Mar/2018 12:09:47] "POST /comment HTTP/1.1" 200 72
+[24/Mar/2018 12:10:12] "POST /comment HTTP/1.1" 200 78
+[24/Mar/2018 12:10:20] "POST /comment HTTP/1.1" 200 72
+[24/Mar/2018 12:12:46] "GET /kylin/post/11 HTTP/1.1" 200 20881
+[24/Mar/2018 12:22:33] "GET /kylin HTTP/1.1" 200 16835
+Not Found: /favicon.ico
+[24/Mar/2018 12:22:34] "GET /favicon.ico HTTP/1.1" 404 3222
+[24/Mar/2018 12:22:36] "GET /kylin/post/8 HTTP/1.1" 200 31057
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 304, in comment
+    c = Comment.objects.get(id=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+[24/Mar/2018 12:23:26] "POST /comment HTTP/1.1" 500 17287
+Internal Server Error: /comment
+Traceback (most recent call last):
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/kk/prac/blog/selfblog/views.py", line 304, in comment
+    c = Comment.objects.get(id=pid)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/kk/.virtualenvs/blog-env/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+[24/Mar/2018 12:23:29] "POST /comment HTTP/1.1" 500 17290
+[24/Mar/2018 12:25:40] "GET /kylin/post/9 HTTP/1.1" 200 18045
+[24/Mar/2018 12:25:43] "POST /comment HTTP/1.1" 200 62
+[24/Mar/2018 12:25:46] "POST /comment HTTP/1.1" 200 62
+[24/Mar/2018 13:16:34] "GET /kylin/post/11 HTTP/1.1" 200 20881
+[24/Mar/2018 13:16:34] "GET /static/css/base.css HTTP/1.1" 200 128
+[24/Mar/2018 13:16:34] "GET /static/img/header.jpg HTTP/1.1" 200 7014
+Not Found: /favicon.ico
+[24/Mar/2018 13:16:35] "GET /favicon.ico HTTP/1.1" 404 3222
+[24/Mar/2018 19:37:46] "GET /kylin HTTP/1.1" 200 16836
+[24/Mar/2018 19:37:47] "GET /static/css/base.css HTTP/1.1" 304 0
+[24/Mar/2018 19:37:47] "GET /static/img/header.jpg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[24/Mar/2018 19:37:49] "GET /favicon.ico HTTP/1.1" 404 3222
+[24/Mar/2018 19:37:50] "GET /kylin/post/8 HTTP/1.1" 200 31101
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 12:01:30
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+[24/Mar/2018 19:39:54] "GET /kylin/post/8 HTTP/1.1" 200 31101
+Forbidden (CSRF token missing or incorrect.): /comment
+[24/Mar/2018 19:39:57] "POST /comment HTTP/1.1" 403 2497
+Forbidden (CSRF token missing or incorrect.): /comment
+[24/Mar/2018 19:40:04] "POST /comment HTTP/1.1" 403 2497
+[24/Mar/2018 19:41:13] "GET /kylin/post/8 HTTP/1.1" 200 31101
+Not Found: /favicon.ico
+[24/Mar/2018 19:41:14] "GET /favicon.ico HTTP/1.1" 404 3222
+Forbidden (CSRF token missing or incorrect.): /comment
+[24/Mar/2018 19:41:25] "POST /comment HTTP/1.1" 403 2497
+[24/Mar/2018 19:43:41] "GET /kylin/category/4 HTTP/1.1" 200 14852
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 19:39:51
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:51:59] "POST /comment HTTP/1.1" 403 2829
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 19:51:22
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:13] "POST /comment HTTP/1.1" 403 2829
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:21] "POST /comment HTTP/1.1" 403 2829
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:22] "POST /comment HTTP/1.1" 403 2829
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:22] "POST /comment HTTP/1.1" 403 2829
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:22] "POST /comment HTTP/1.1" 403 2829
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:33] "POST /comment HTTP/1.1" 403 2829
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:33] "POST /comment HTTP/1.1" 403 2829
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 19:55:41] "POST /comment HTTP/1.1" 403 2829
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 19:54:57
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+Forbidden (CSRF cookie not set.): /comment
+[24/Mar/2018 20:02:30] "POST /comment HTTP/1.1" 403 2829
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 24, 2018 - 20:02:09
+Django version 1.11.3, using settings 'blog.settings.product'
+Starting development server at http://0:800/
+Quit the server with CONTROL-C.
+{}
+{'RUN_MAIN': 'true', 'HTTP_REFERER': 'http://101.236.5.18:887/kylin/post/10', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'POST', 'HTTP_ORIGIN': 'http://101.236.5.18:887', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_ACCEPT': '*/*', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.9', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/comment', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '117.152.243.224', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '128', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd352d050>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'application/x-www-form-urlencoded; charset=UTF-8', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate'}
+<QueryDict: {u'csrfmiddlewaretoken': [u'Qy6g8wBLhynuEut9qQK2TsSLwWiKEgca9qHBXj7hcIjCJD01iLVkp0CS8CHlQY6J/'], u'txt': [u'11'], u'pid': [u'0'], u'target': [u'/kylin/post/10']}>
+{'csrftoken': 'RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt'}
+{'RUN_MAIN': 'true', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'GET', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False[25/Mar/2018 08:22:22] "GET /kylin HTTP/1.1" 200 16837
+[25/Mar/2018 08:22:23] "GET /static/css/base.css HTTP/1.1" 304 0
+[25/Mar/2018 08:22:23] "GET /static/img/header.jpg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[25/Mar/2018 08:22:24] "GET /favicon.ico HTTP/1.1" 404 3222
+, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.8', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/kylin', 'HTTP_COOKIE': 'csrftoken=RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '61.184.139.254', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd3552450>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'text/plain', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, sdch'}
+<QueryDict: {}>
+{'csrftoken': 'RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt'}
+{'RUN_MAIN': 'true', 'HTTP_REFERER': 'http://101.236.5.18:800/kylin', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'GET', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.8', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=0[25/Mar/2018 08:22:25] "GET /kylin/post/8 HTTP/1.1" 200 31101
+1;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/kylin/post/8', 'HTTP_COOKIE': 'csrftoken=RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '61.184.139.254', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd2bde350>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'text/plain', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, sdch'}
+<QueryDict: {}>
+{'csrftoken': 'RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt', '_uid': '678a7494ea3b64568e8bb985f8c0339a'}
+{'RUN_MAIN': 'true', 'HTTP_REFERER': 'http://101.236.5.18:800/kylin/post/8', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'POST', 'HTTP_ORIGIN': 'http://101.236.5.18:800', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_X_REQUESTED_WITH': 'XMLHttpRequest', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_ACCEPT': '*/*', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.8', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:Forbidden (CSRF token missing or incorrect.): /comment
+[25/Mar/2018 08:22:55] "POST /comment HTTP/1.1" 403 2497
+*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/comment', 'HTTP_COOKIE': 'csrftoken=RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt; _uid=678a7494ea3b64568e8bb985f8c0339a', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '61.184.139.254', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '126', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd2bde450>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'application/x-www-form-urlencoded; charset=UTF-8', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate'}
+<QueryDict: {u'csrfmiddlewaretoken': [u'tfW4lFo4ng3sfWDxqRwAmmYmTYNbG8iBAuGwK4NIdd3IsPiBelxAkw7boUPc7Vzj/'], u'txt': [u'1'], u'pid': [u'0'], u'target': [u'/kylin/post/8']}>
+post or header  pE4LthgDeWzYoJRRDAfoyxfWZYUfgOk5uqCh6gSZlP4JTcrWNrZo2lYOtN0CsKRl
+cookie RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt
+{'csrftoken': 'jPIDZVP8YbRXsSWrQqjcZhef9WOL5nlMCHjYOIlETlN5x1tjIluuvPYmLCdmh5fl', '_uid': 'b88c3cd5b0de0af221b0a4b331f80b8f'}
+{'RUN_MAIN': 'true', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'GET', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.9', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/kk/post/1', 'HTTP_COOKIE': 'csrftoken=jPIDZVP8YbRXsSWrQqjcZhef9WOL5nlMCHjYOIlETlN5x1tjIluuvPYmLCdmh5fl; _uid=b88c3cd5b0de0af221b0a4b331f80b8f', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\[25/Mar/2018 15:00:52] "GET /kk/post/1 HTTP/1.1" 200 13770
+Not Found: /favicon.ico
+[25/Mar/2018 15:00:52] "GET /favicon.ico HTTP/1.1" 404 3222
+a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '117.152.244.112', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd2bde750>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'text/plain', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate'}
+<QueryDict: {}>
+{'csrftoken': 'jPIDZVP8YbRXsSWrQqjcZhef9WOL5nlMCHjYOIlETlN5x1tjIluuvPYmLCdmh5fl', '_uid': 'b88c3cd5b0de0af221b0a4b331f80b8f'}
+{'RUN_MAIN': 'true', 'HTTP_REFERER': 'http://101.236.5.18:800/kk/post/1', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'POST', 'HTTP_ORIGIN': 'http://101.236.5.18:800', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_X_REQUESTED_WITH': 'XMLHttpRequest', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_ACCEPT': '*/*', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.9', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/comment', 'HTTP_COOKIE': 'csrftoken=jPIDZVP8YbRXsSWrQqjcZhef9WOL5nlMCHjYOIlETlN5x1tjIluuvPYmLCdmh5fl; _uid=b88c3cd5b0de0af221b0a4b331f80b8f', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '117.152.244.112', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '123', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd2bde850>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'application/x-www-form-urlencoded; charset=UTF-8', 'wsgi.filForbidden (CSRF token missing or incorrect.): /comment
+[25/Mar/2018 15:01:07] "POST /comment HTTP/1.1" 403 2497
+[26/Mar/2018 08:05:35] "GET /kylin HTTP/1.1" 200 16837
+[26/Mar/2018 08:05:35] "GET /static/css/base.css HTTP/1.1" 304 0
+[26/Mar/2018 08:05:36] "GET /static/img/header.jpg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[26/Mar/2018 08:05:40] "GET /favicon.ico HTTP/1.1" 404 3222
+e_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate'}
+<QueryDict: {u'csrfmiddlewaretoken': [u'0eUSaIoWSNwkyoiBmxXlPyQPYU4b6zLwj6vdZvUsNXssDxPtes8Dl6AWAAtMihF5/'], u'txt': [u'1'], u'pid': [u'0'], u'target': [u'/kk/post/1']}>
+post or header  EUVIW2Nma43pTxeU1JpJpIdIleG9yDdxdOviy9BZIhAFDsoSuaaGijcMIga1CPZx
+cookie jPIDZVP8YbRXsSWrQqjcZhef9WOL5nlMCHjYOIlETlN5x1tjIluuvPYmLCdmh5fl
+{'csrftoken': 'RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt'}
+{'RUN_MAIN': 'true', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'GET', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.8', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/kylin', 'HTTP_COOKIE': 'csrftoken=RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '61.184.139.254', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd2bde9d0>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'text/plain', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, sdch'}
+<QueryDict: {}>
+{'csrftoken': 'RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt'}
+{'RUN_MAIN': 'true', 'HTTP_REFERER': 'http://101.236.5.18:800/kylin', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'GET', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', [26/Mar/2018 08:05:50] "GET /kylin/post/8 HTTP/1.1" 200 31101
+'HTTP_HOST': '101.236.5.18:800', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.8', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/kylin/post/8', 'HTTP_COOKIE': 'csrftoken=RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '61.184.139.254', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd2bde550>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'text/plain', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, sdch'}
+<QueryDict: {}>
+{'csrftoken': 'RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt', '_uid': '678a7494ea3b64568e8bb985f8c0339a'}
+{'RUN_MAIN': 'true', 'HTTP_REFERER': 'http://101.236.5.18:800/kylin/post/8', 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.12', 'SCRIPT_NAME': u'', 'REQUEST_METHOD': 'POST', 'HTTP_ORIGIN': 'http://101.236.5.18:800', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HOME': '/home/kk', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'SERVER_PORT': '800', 'USERNAME': 'root', 'HTTP_X_REQUESTED_WITH': 'XMLHttpRequest', 'HTTP_HOST': '101.236.5.18:800', 'HTTP_ACCEPT': '*/*', 'SUDO_GID': '1002', 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fdddcb8c1e0>, 'wsgi.multiprocess': False, 'HTTP_ACCEPT_LANGUAGE': 'zh-CN,zh;q=0.8', 'MAIL': '/var/mail/root', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:Forbidden (CSRF token missing or incorrect.): /comment
+[26/Mar/2018 08:06:07] "POST /comment HTTP/1.1" 403 2497
+*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'PATH_INFO': u'/comment', 'HTTP_COOKIE': 'csrftoken=RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt; _uid=678a7494ea3b64568e8bb985f8c0339a', 'LOGNAME': 'root', 'USER': 'root', 'QUERY_STRING': '', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'PS1': '(blog-env) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\u@\\h:\\w\\$ ', 'TERM': 'xterm', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', 'HTTP_CONNECTION': 'keep-alive', 'SERVER_NAME': 'ubuntu.cloud.mos', 'REMOTE_ADDR': '171.41.9.67', 'wsgi.url_scheme': 'http', 'SUDO_USER': 'kk', 'CONTENT_LENGTH': '128', 'SUDO_UID': '1002', 'wsgi.input': <socket._fileobject object at 0x7fddd2bde6d0>, 'wsgi.multithread': True, 'TZ': 'Asia/Shanghai', 'SUDO_COMMAND': './manage.py runserver 0:800', 'GATEWAY_INTERFACE': 'CGI/1.1', 'DJANGO_SETTINGS_MODULE': 'blog.settings.product', 'CONTENT_TYPE': 'application/x-www-form-urlencoded; charset=UTF-8', 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x7fddd8a5f4c8>, 'REMOTE_HOST': '', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate'}
+<QueryDict: {u'csrfmiddlewaretoken': [u'G5JtnYvdhjUMM16hD3JOgK3W6ODv9ahBNktVMnUR7gU2ZULlrxKOeUcLBKFwAXyj/'], u'txt': [u'111'], u'pid': [u'0'], u'target': [u'/kylin/post/8']}>
+post or header  DfkFVmiYRF06s5sI2VlGRhp19xJvFwIgF0Q9S8IPFAPJTyvU4hpUvomz0AQiuX5R
+cookie RzsClBwFET35VLFLWqfDzp95UlWnHBhLYOc4K0VjuQ3l8EkPKUgDxziUphYo8oyt

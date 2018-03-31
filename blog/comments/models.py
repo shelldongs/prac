@@ -11,7 +11,7 @@ class Comment(models.Model):
         (1, '可用'),
         (2, '删除'),
     )
-    target = models.CharField(default='/', max_length=100, verbose_name="target")
+    target = models.CharField(max_length=100, verbose_name="target")
     content = models.CharField(max_length=200, verbose_name="内容")
     status = models.IntegerField(default=1, choices=STATUS_ITEMS, verbose_name="状态")
     nickname = models.CharField(max_length=50, verbose_name="昵称")
