@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import F
 
 
 class Post(models.Model):
@@ -33,6 +34,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def incr_pv(self):
+        self.__class__._default_manager.filter(id=self.id).update(pv=F('pv') +1)
+
+    def incr_uv(self):
+        self.__class__._default_manager.filter(id=self.id).update(uv=F('uv') +1)
+
 
 class Category(models.Model):
     STATUS_ITEMS = (

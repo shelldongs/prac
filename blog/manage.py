@@ -1,4 +1,4 @@
-#!/home/kk/.virtualenvs/blog-env/bin/python
+#!/root/.virtualenvs/typeidea-env/bin/python
 import os
 import sys
 

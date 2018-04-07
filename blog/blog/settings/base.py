@@ -1,4 +1,5 @@
-# coding:utf-8
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 """
 Django settings for blog project.
 
@@ -43,16 +44,24 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'selfblog',
-    'config',
-    'comments',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'dal',
+    'dal_select2',
+    'xadmin',
+    'crispy_forms',
+    
+    'ckeditor',
+    'ckeditor_uploader',
+
+    'selfblog',
+    'config',
+    'comments',
 ]
 
 MIDDLEWARE = [
@@ -155,3 +164,75 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'skin': 'moono-lisa',
+        'toolbar_Basic': [
+            ['Source', '-', 'Bold', 'Italic']
+        ],
+
+	'toolbar_YourCustomToolbarConfig': [
+            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
+           # {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+           # {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
+          #  {'name': 'forms',
+          #   'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
+          #             'HiddenField']},
+          #  '/',
+            {'name': 'basicstyles',
+             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+            {'name': 'paragraph',
+             'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+                       'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
+                       'Language']},
+            '/',
+            {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+            {'name': 'insert',
+             'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'CodeSnippet', 'SpecialChar', 'PageBreak', 'Iframe']},
+            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+            #{'name': 'code', 'items': ['CodeSnippet']},  # insert plugin
+            #{'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
+            #{'name': 'about', 'items': ['About']},
+            '/',  # put this to force next toolbar on new line
+           # {'name': 'yourcustomtools', 'items': [
+           #     # put the name of your editor.ui.addButton here
+           #     'Preview',
+           #     'Maximize',
+
+           # ]},
+        ],
+        'toolbar': 'YourCustomToolbarConfig',  # above config 
+        'width': '100%',
+        'tabSpaces': 4,
+        'extraPlugins': ','.join([
+                        'uploadimage', # the upload image feature
+                        'codesnippet',
+                        # your extra plugins here
+                        'div',
+                        'autolink',
+                        'autoembed',
+                        'embedsemantic',
+                        'autogrow',
+                        # 'devtools',
+                        'widget',
+                        'lineutils',
+                        'clipboard',
+                        'dialog',
+                        'dialogui',
+                        'elementspath'
+                    
+        ]),
+    }
+}
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join('/root/xa/prac/blog', 'media')
+CKEDITOR_UPLOAD_PATH = 'article_images'
+
+KEDITOR_UPLOAD_SLUGIFY_FILENAME = False
+KEDITOR_RESTRICT_BY_DATE = False
+KEDITOR_BROWSE_SHOW_DIRS = False
+

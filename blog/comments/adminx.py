@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.contrib import admin
 from .models import Comment
+import xadmin
 
-from blog.custom_site import cus_site
 
-
-@admin.register(Comment, site=cus_site)
-class CommentAdmin(admin.ModelAdmin):
+class CommentAdmin(object):
     list_display = ('content', 'nickname', 'status', 'created_time')
 
+
+xadmin.site.register(Comment, CommentAdmin)
 
