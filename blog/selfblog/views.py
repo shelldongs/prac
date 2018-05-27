@@ -23,7 +23,7 @@ from config.models import Link, SideBar
 from comments.models import Comment
 
 
-PAGE_SIZE = 6
+PAGE_SIZE = 10 
 
 
 class CommonContextMixin(ContextMixin):
@@ -61,7 +61,7 @@ class CommonContextMixin(ContextMixin):
         return {'links': links}
 
     def get_hot_post(self):
-        hot_post = Post.objects.filter(owner_id=self.owner.id, status=1).order_by('-pv')
+        hot_post = Post.objects.filter(owner_id=self.owner.id, status=1).order_by('-pv')[:10]
         return {'hot_post': hot_post}
 
     def get_common_context(self):

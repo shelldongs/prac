@@ -75,7 +75,8 @@ a {
     </div>
     <hr style="border-top: 1px solid #C0C0C0"/>
     <div style="text-align: right">
-        posted @ {{ post.created_time }}  阅读{{ post.pv }}, {{ post.uv }} 评论(19) 编辑
+        posted @ {{ post.created_time }}  阅读{{ post.pv }}, {{ post.uv }} 评论(19) 
+        <a href="/xadmin/selfblog/post/{{ post.id }}/update/">编辑</a>
     </div>
     <input type="hidden" id="csrf_token" name="csrf_token" value={{ csrf_token }} />
     <div id="push" class="txt-huifu">

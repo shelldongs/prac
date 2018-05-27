@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.contrib.auth.models import User
+
 from django import forms
 from django.contrib import admin
 from django.core import urlresolvers
+from django.urls import reverse
 
 from .models import Post, Tag, Category
 from blog.custom_site import cus_site
@@ -15,30 +18,39 @@ from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
+class TagTextInput(forms.TextInput):
+    def format_value(self, value):
+        if value:
+            values = value.values_list('name', flat=True)
+            value = [v for v in values]
+            return ','.join(value)
+
+
+
 class PostAdminForm(forms.ModelForm):
-    desc = forms.CharField(widget=forms.Textarea, label='摘要', required=False)
-    weight = forms.BooleanField(label="置顶", required=False)
+    desc = forms.CharField(widget=forms.Textarea(attrs={'rows': 3, 'style':'width:830px;'}), label='摘要', required=False)
     #other = forms.CharField(label="other", max_length=20)
     
     category = forms.ModelChoiceField(
         queryset = Category.objects.all(),
         widget = autocomplete.ModelSelect2(url='category-autocomplete'),
-        label = "Category",
+        label = "分类",
     )
 
-    tags = forms.ModelMultipleChoiceField(
-        queryset = Tag.objects.all(),
-        widget = autocomplete.ModelSelect2Multiple(url='tag-autocomplete'),
-        label = "Tag",
-    )
+#    tags = forms.ModelMultipleChoiceField(
+#        queryset = Tag.objects.all(),
+#        widget = autocomplete.ModelSelect2Multiple(url='tag-autocomplete'),
+#        label = "Tag",
+#    )
 
-    content = forms.CharField(widget=CKEditorUploadingWidget())
+    #tags = forms.CharField(widget=forms.Textarea(attrs={'rows': 1}), max_length=100, label="标签", help_text=",分割标签,最多十个标签")
+    tags = forms.CharField(max_length=100, widget=TagTextInput(attrs={'style': 'width:830px;'}), label="标签",  help_text=",分割标签,最多十个标签")
+    content = forms.CharField(widget=CKEditorUploadingWidget(), label="正文")
 
 
-    def clean_weight(self):
-        is_top = self.cleaned_data['weight']
-        return 1 if is_top else 0
-
+    def clean_tags(self):
+        tags = self.cleaned_data['tags'].lower().strip().split(',')
+        return tags
 
 '''
 def set_on_top(obj):
@@ -49,7 +61,7 @@ set_on_top.short_description = "是否置顶"
 
 
 class PostAdmin(BaseOwnerAdmin):
-    form = PostAdminForm  # 不如在ModelAdmin中做fileds
+    form = PostAdminForm  
     actions_on_bottom = True  # 底部展示action
     actions_on_top = False       
     date_hierarchy = "created_time"  # 时间分类
@@ -59,15 +71,37 @@ class PostAdmin(BaseOwnerAdmin):
     set_on_top.boolean = True
     set_on_top.short_description = "是否置顶"
 
+    def save_models(self):
+        tags = self.form_obj.cleaned_data['tags']
+        ts = []
+        for t in tags:
+            tag, created = Tag.objects.get_or_create(name=t, owner=self.request.user)
+            ts.append(tag)
+        self.form_obj.cleaned_data['tags'] = ts
+        return super(PostAdmin, self).save_models()
 
     def my_delete(self, obj):
         #tmp_url = urlresolvers.reverse('cus_site:selfblog_post_delete', args=(obj.id,))
-        tmp_url = urlresolvers.reverse('xadmin:selfblog_post_delete', args=(obj.id,))
+        tmp_url = reverse('xadmin:selfblog_post_delete', args=(obj.id,))
         h = "<span><a href='{}'>删除</a></span>".format(tmp_url)
         from django.utils.safestring import mark_safe
         return mark_safe(h)
     my_delete.short_description = '删除'
     #my_delete.allow_tags = True
+
+    def change_post(self, obj):
+        tmp_url = reverse('xadmin:selfblog_post_change', args=(obj.id,))
+        h = "<span><a href='{}'>编辑</a></span>".format(tmp_url)
+        from django.utils.safestring import mark_safe
+        return mark_safe(h)
+    change_post.short_description = '编辑'
+
+    def view_post(self, obj):
+        tmp_url = reverse('post_detail', args=(self.request.user, obj.id,))
+        h = "<span><a target='view_window' href='{}'>{}</a></span>".format(tmp_url, obj.title)
+        from django.utils.safestring import mark_safe
+        return mark_safe(h)
+    view_post.short_description = '浏览'
 
 #    def get_list_display(self, request):  # 此处也应该调用父类
 #        if request.user.is_superuser:
@@ -88,9 +122,9 @@ class PostAdmin(BaseOwnerAdmin):
         return list_dis
 
 
-    list_display = ('title', 'created_time', 'pv', 'uv', 'status', 'my_delete') 
+    list_display = ('view_post', 'change_post', 'pv', 'uv', 'status', 'my_delete', 'created_time') 
     list_filter = ('category__name', 'status', 'owner__username', 'tags')
-    list_display_links = ('title',)
+    #list_display_links = ('title',)
     #list_editable = ('category',)  # 会造成大量外键查询
 
 
@@ -102,8 +136,8 @@ class PostAdmin(BaseOwnerAdmin):
         Fieldset(
             '文章编辑',
             'title',
-            'desc',
             'content',
+            'desc',
             'category',
             'tags',
             'status', 'weight',

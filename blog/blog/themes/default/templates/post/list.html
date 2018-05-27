@@ -18,12 +18,17 @@
             <div class="post-content">
                 <div>
                     <p>
-                        {{ post.desc }} <a href="{% url 'post_detail' username post.id %}">继续阅读</a>
+                        {% autoescape off %}
+                        {{ post.desc }}
+                        {% endautoescape %}
+                        
+                        <a href="{% url 'post_detail' username post.id %}">继续阅读</a>
                     </p>
                 </div>
             </div>
             <div class="post-desc">
-                posted @ {{ post.created_time }}  阅读({{ post.pv }}) 评论(19) 编辑
+                posted @ {{ post.created_time }}  阅读({{ post.pv }}) 评论(19) 
+                <a href="/xadmin/selfblog/post/{{ post.id }}/update/">编辑</a>
             </div>
             <hr style="border-bottom:1px solid #C0C0C0" />
         </div>

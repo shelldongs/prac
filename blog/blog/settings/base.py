@@ -17,7 +17,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 THEME = 'themes/default'
-STATIC_ROOT = '/root/prac/prac/tt'  # 收集各app的static目录下静态资源到哪个目录
+STATIC_ROOT = '/data/www/dj/static'  # 收集各app的static目录下静态资源到哪个目录
 
 # url反射名 主要用于模板系统
 # 如 /static/css/base.css 将会向django发送一个请求，django在静态目录查找并返回
